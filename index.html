@@ -1,1 +1,236 @@
-sup world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- [CHANGE THIS: Update the title to your chosen brand name] -->
+    <title>SignalStack | Trigger-Based OSINT Context Sheets</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent: #2563eb; /* Trustworthy B2B Blue */
+            --accent-hover: #1d4ed8;
+            --terminal-bg: #0f172a;
+            --terminal-text: #38bdf8;
+            --terminal-comment: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 3rem 0 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            color: var(--text-main);
+        }
+
+        /* Highlight specific words */
+        strong { color: var(--text-main); font-weight: 600; }
+        .highlight { color: var(--accent); }
+
+        /* The Data / Example Box */
+        .terminal {
+            background-color: var(--terminal-bg);
+            color: var(--terminal-text);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .terminal .comment { color: var(--terminal-comment); }
+        .terminal .key { color: #f8fafc; }
+
+        /* Buttons & CTA */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .btn { width: auto; }
+        }
+
+        .btn:hover { background-color: var(--accent-hover); }
+
+        .price-note {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .price-note { text-align: left; margin-left: 1rem; display: inline-block; }
+        }
+
+        /* Simple List */
+        ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            color: var(--text-muted);
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 4rem 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <!-- [CHANGE THIS: Add your brand/logo text here] -->
+            <h1>Stop sending generic sequences.<br><span class="highlight">Sell on the trigger.</span></h1>
+            <p class="lead">
+                We provide enterprise sales teams with <strong>25-50 hyper-qualified leads</strong> rooted in active technical infrastructure changes. Hand-delivered in a single, actionable sheet.
+            </p>
+        </header>
+
+        <section>
+            <h2>The Apollo / ZoomInfo playbook is dead.</h2>
+            <p>
+                Enterprise AEs and SDRs are drowning in high quotas and generic data. Your buyers are ignoring your emails because you are guessing at their timing. 
+            </p>
+            <p>
+                We use OSINT (Open Source Intelligence) to monitor your target accounts for deep technical triggers—like newly registered subdomains, fresh SSL certificates, and active tech stack changes. Then, we enrich the data and write the exact 1-2 sentence technical hook you need to get a reply.
+            </p>
+        </section>
+
+        <section>
+            <h2>What you get in your Context Sheet:</h2>
+            <ul>
+                <li><strong>Verified Triggers:</strong> 25-50 target accounts that just made an infrastructure move in the last 30 days.</li>
+                <li><strong>Decision Makers:</strong> Verified contact info for the IT, GTM, or Sales leader in charge.</li>
+                <li><strong>The Hook:</strong> A custom-written business case connecting the technical trigger directly to your product.</li>
+            </ul>
+
+            <!-- [CHANGE THIS: Update the terminal text to reflect a realistic example for your specific SaaS niche] -->
+            <div class="terminal">
+                <span class="comment">// Example Row Output: Context Sheet</span><br><br>
+                <span class="key">Target_Account:</span> Stripe<br>
+                <span class="key">Trigger_Event:</span> Registered "bofa-enhanced-issuer-network.stripe.com" (2 days ago)<br>
+                <span class="key">Contact:</span> Sarah Jenkins (VP of Partnerships)<br>
+                <span class="key">Email:</span> s.jenkins@stripe.com<br>
+                <br>
+                <span class="comment">// Ready-to-paste hook for your sequence:</span><br>
+                <span class="key">Custom_Hook:</span> "Hey Sarah - saw the new infrastructure spinning up for the BofA Enhanced Issuer Network. Usually when teams deploy new issuer endpoints, load testing becomes a bottleneck. Are you handling that in-house?"
+            </div>
+        </section>
+
+        <section>
+            <h2>Pipeline velocity, productized.</h2>
+            <p>
+                No long-term retainers. No consulting hours. Just a flat fee for a highly actionable sheet of leads you can hand straight to your SDRs today. 
+            </p>
+            <p>
+                If this sheet books you one meeting that turns into a $50k deal, this was the highest ROI expense on your corporate card this year.
+            </p>
+
+            <div style="margin-top: 3rem;">
+                <!-- [CHANGE THIS: Replace '#' with your actual Stripe Payment Link (e.g., https://buy.stripe.com/test_...)] -->
+                <a href="#" class="btn">Order Context Sheet</a>
+                <!-- [CHANGE THIS: Update the price if you chose something other than $349] -->
+                <span class="price-note">$349 One-Time. Corporate Card approved.</span>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>How the onboarding works</h2>
+            <p>
+                <strong>1. Swipe your card.</strong> You'll immediately be redirected to a short form.<br>
+                <strong>2. Define your target.</strong> Give us your target account list, ICP, and a 2-sentence description of your product's value prop.<br>
+                <strong>3. Get your sheet.</strong> Within 72 hours, we drop a secure Google Sheet into your inbox. Copy, paste, send, and book meetings.
+            </p>
+        </section>
+
+        <footer>
+            <!-- [CHANGE THIS: Add your contact email and update the year/name] -->
+            <p>Questions? <a href="mailto:founder@yourdomain.com" style="color: var(--accent);">Email the founder</a>.</p>
+            <p>&copy; 2026 Context Sheets. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
